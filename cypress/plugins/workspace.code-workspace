@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "Cypress_PDE",
+			"path": "../.."
+		},
+		{
+			"name": "plat-data-exporter-automation",
+			"path": "../../plat-data-exporter-automation"
+		}
+	],
+	"settings": {}
+}

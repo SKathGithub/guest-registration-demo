@@ -1,0 +1,44 @@
+{
+  "name": "cypress_register",
+  "version": "1.0.0",
+  "description": "registration using bdd framework",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:tests": "cypress run"
+    },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  },
+  "keywords": [
+    "cypress",
+    "bdd",
+    "cucumber"
+  ],
+  "author": "Shweta Katheriya",
+  "license": "ISC",
+  "dependencies": {
+    "-": "0.0.1",
+    "cypress": "^7.7.0",
+    "cypress-cucumber-preprocessor": "^4.3.1",
+    "cypress-file-upload": "^5.0.5",
+    "cypress-multi-reporters": "^1.5.0",
+    "cypress-wait-until": "^1.7.1",
+    "cypress-xpath": "^1.6.2",
+    "mocha": "^8.4.0",
+    "mochawesome": "^7.0.1",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^6.0.1",
+    "moment": "^2.29.2",
+    "prettier": "^2.2.1",
+    "save-dev": "0.0.1-security",
+    "xlsx": "^0.17.4"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0"
+  },
+  "retries": {
+    "runMode": 2,
+    "openMode": 3
+  }
+}

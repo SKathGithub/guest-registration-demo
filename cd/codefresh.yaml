@@ -1,0 +1,36 @@
+version: "1.0"
+steps:
+
+  main_clone:
+    type: "git-clone"
+    git: 'FrontlineEducation'
+    repo: 'FrontlineEducation/${{REPO_NAME}}'
+    revision: '${{REPO_BRANCH}}'
+
+  build:
+    type: "build"
+    working_directory: "${{main_clone}}"
+    image_name: "FrontlineEducation/autofire"
+    tag: "${{CF_BUILD_ID}}"
+    disable_push: true
+    dockerfile:
+      content: |
+        FROM cypress/included:${{CYPRESS_VERSION}}
+        COPY ./ /e2e
+        WORKDIR /e2e/
+        RUN npm install
+        RUN cp -f cypress.${{ENV}}.json cypress.json
+
+  push:
+    type: "push"
+    image_name: "autofire/cypress"
+    registry: "systems-cicd"
+    candidate: "${{build}}"
+    tags: ['${{CF_BUILD_ID}}']
+
+  deploy:
+    image: "codefresh/cf-deploy-kubernetes:master"
+    commands: ['/cf-deploy-kubernetes ./cd/${{JOB_FILE}}']
+    environment:
+      - KUBECONTEXT=ss
+      - KUBERNETES_NAMESPACE=${{NAMESPACE}}

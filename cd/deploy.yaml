@@ -1,0 +1,23 @@
+apiVersion: batch/v1
+kind: Job
+metadata: {name: 'cypress-{{CF_BUILD_ID}}'}
+spec:
+  parallelism: {{TEST_CONCURRENCY}}
+  backoffLimit: 2
+  template:
+    spec:
+      containers:
+      - name: cypress-{{CF_BUILD_ID}}
+        image: {{ECR}}/autofire/cypress:{{CF_BUILD_ID}}
+        command: [/usr/local/bin/cypress]
+        args:
+          - run
+          - --record
+          - --parallel
+          - --ci-build-id={{CF_BUILD_ID}}
+          - --group={{REPO_BRANCH}}
+          - --key={{CYPRESS_RECORD_KEY}}
+          - --browser={{WEB_BROWSER}}
+      dnsPolicy: "None"
+      dnsConfig: {nameservers: [10.10.40.51]}
+      restartPolicy: Never

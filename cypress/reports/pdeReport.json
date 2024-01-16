@@ -1,0 +1,182 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 0,
+    "pending": 0,
+    "failures": 4,
+    "start": "2021-06-08T09:39:43.833Z",
+    "end": "2021-06-08T09:39:56.631Z",
+    "duration": 12798,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5af1f947-0eb3-4cfa-b9b0-f353572bee64",
+      "title": "",
+      "fullFile": "cypress/integration/cucumber_tests_features/dataExporter.feature",
+      "file": "cypress/integration/cucumber_tests_features/dataExporter.feature",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6097f8c8-4a18-4417-8a98-bc5becd89adf",
+          "title": "PDE application validation",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User redirection to Data Export History Page",
+              "fullTitle": "PDE application validation User redirection to Data Export History Page",
+              "timedOut": null,
+              "duration": 212,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit",
+                "estack": "CypressError: `cy.visit()` must be called with a `url` or an `options` object containing a `url` as its 1st argument\n\nhttps://on.cypress.io/visit\n    at Context.visit (http://localhost:42179/__cypress/runner/cypress_runner.js:158782:19)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/support/index.js:7:6)\nFrom Your Spec Code:\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/support/index.js:7:6)",
+                "diff": null
+              },
+              "uuid": "8d066d0e-0442-49f3-8499-39ba6d36ceaf",
+              "parentUUID": "6097f8c8-4a18-4417-8a98-bc5becd89adf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click on New Template button",
+              "fullTitle": "PDE application validation User click on New Template button",
+              "timedOut": null,
+              "duration": 4203,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=new-template-btn]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=new-template-btn]`, but never found it.\n    at DataExporterPage.clickNewTemplate (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:140:10)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:60:32)\n    at Context.resolveAndRunStepDefinition (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:10585:9)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:9926:35)",
+                "diff": null
+              },
+              "uuid": "44dc6ddc-ca4d-482a-b95a-e4585adc9750",
+              "parentUUID": "6097f8c8-4a18-4417-8a98-bc5becd89adf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click on cancel from New Template popup",
+              "fullTitle": "PDE application validation User click on cancel from New Template popup",
+              "timedOut": null,
+              "duration": 4163,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Which data set will this template use?' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Which data set will this template use?' but never did.\n    at DataExporterPage.cancelNewTemplate (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:153:10)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:66:32)\n    at Context.resolveAndRunStepDefinition (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:10585:9)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:9926:35)",
+                "diff": null
+              },
+              "uuid": "27035fe5-df8f-42a5-b9a0-d788b0359a51",
+              "parentUUID": "6097f8c8-4a18-4417-8a98-bc5becd89adf",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "User click on Export from New Template popup",
+              "fullTitle": "PDE application validation User click on Export from New Template popup",
+              "timedOut": null,
+              "duration": 4131,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const state = window.testState;\nreturn cy\n  .then(() => state.onStartScenario(scenario, indexedSteps))\n  .then(() =>\n    resolveAndRunBeforeHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() =>\n    indexedSteps.forEach((step) =>\n      stepTest.call(this, state, step, rowData)\n    )\n  )\n  .then(() =>\n    resolveAndRunAfterHooks.call(this, scenario.tags, state.feature.name)\n  )\n  .then(() => state.onFinishScenario(scenario));",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=new-template-btn]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `[data-testid=new-template-btn]`, but never found it.\n    at DataExporterPage.clickNewTemplate (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:140:10)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:63:32)\n    at Context.resolveAndRunStepDefinition (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:10585:9)\n    at Context.eval (http://localhost:42179/__cypress/tests?p=cypress/integration/cucumber_tests_features/dataExporter.feature:9926:35)",
+                "diff": null
+              },
+              "uuid": "623c6f53-12ff-46ec-bbe5-e93556065b26",
+              "parentUUID": "6097f8c8-4a18-4417-8a98-bc5becd89adf",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "8d066d0e-0442-49f3-8499-39ba6d36ceaf",
+            "44dc6ddc-ca4d-482a-b95a-e4585adc9750",
+            "27035fe5-df8f-42a5-b9a0-d788b0359a51",
+            "623c6f53-12ff-46ec-bbe5-e93556065b26"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 12709,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "pdeReport",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/reports",
+        "reportFilename": "pdeReport",
+        "quite": true,
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
