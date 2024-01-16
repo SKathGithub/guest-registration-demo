@@ -1,4 +1,4 @@
-# guest-registration-demo:
+# Guest-Registration-Demo:
 Automation Repository for guest-registration
 - Install Node.JS and set path in Environment Variables 
 - Install VSCode or any editor and the install “Package.json” file by "npm init"
