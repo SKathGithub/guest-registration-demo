@@ -1,4 +1,4 @@
-# plat-data-exporter-automation:
+# guest-registration-demo:
 Automation Repository for PDE
 - Install Node.JS and set path in Environment Variables 
 - Install VSCode or any editor and the install “Package.json” file by "npm init"
